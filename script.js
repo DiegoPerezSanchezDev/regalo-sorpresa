@@ -54,8 +54,17 @@ async function startCountdown() {
   }
 
   showScreen(revealScreen);
-  revealScreen.scrollTop = 0;
+  resetView(revealScreen);
   launchConfetti();
+}
+
+function resetView(screen) {
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  screen.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  window.requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+    screen.scrollTop = 0;
+  });
 }
 
 function resizeCanvas() {
@@ -123,9 +132,9 @@ function selectDate(option) {
     item.classList.toggle("is-selected", item === option);
   });
 
-  selectedDate.textContent = `${option.dataset.date}. Ya solo falta hacer la maleta.`;
+  selectedDate.textContent = `${option.dataset.date}. Empieza la cuenta atr\u00e1s para perdernos juntos.`;
   showScreen(finalScreen);
-  finalScreen.scrollTop = 0;
+  resetView(finalScreen);
   launchConfetti();
 }
 
