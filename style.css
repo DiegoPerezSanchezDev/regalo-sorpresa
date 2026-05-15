@@ -505,7 +505,7 @@ h2 {
 
 .final-image-wrap {
   width: 100%;
-  max-width: 560px;
+  max-width: 430px;
   margin-bottom: 24px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.72);
@@ -516,8 +516,9 @@ h2 {
 .final-image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
 }
 
 .screen-final h2 {
