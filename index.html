@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Una sorpresa para ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <main class="page-shell">
+    <section class="hero-card" aria-live="polite">
+      <p class="eyebrow">Solo para ti</p>
+
+      <div class="screen screen-intro is-active" id="introScreen">
+        <h1>Hay algo que llevo guardando con mucha ilusión.</h1>
+        <p class="lead">
+          Si estás leyendo esto, significa que ha llegado el momento de descubrirlo.
+        </p>
+        <button class="primary-button" id="revealButton" type="button">
+          Descubrir sorpresa
+        </button>
+      </div>
+
+      <div class="screen screen-countdown" id="countdownScreen">
+        <p class="soft-label">Respira hondo...</p>
+        <div class="countdown-number" id="countdownNumber">3</div>
+        <p class="lead compact">Esto empieza en</p>
+      </div>
+
+      <div class="screen screen-reveal" id="revealScreen">
+        <p class="soft-label">Sorpresa</p>
+        <h2>¡Nos vamos de viaje!</h2>
+        <div class="destination-pill">
+          <span>Nuestro destino</span>
+          <strong id="destinationName">París</strong>
+        </div>
+        <p class="romantic-message" id="romanticMessage">
+          Porque no hay mejor regalo que seguir coleccionando momentos contigo.
+          Prepárate para perdernos, reírnos y hacer de este viaje otro recuerdo
+          precioso de los nuestros.
+        </p>
+      </div>
+    </section>
+
+    <p class="footer-note">Hecho con amor, nervios y muchísimas ganas.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
