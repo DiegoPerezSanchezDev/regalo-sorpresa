@@ -14,8 +14,6 @@
 
   <main class="page-shell">
     <section class="hero-card" aria-live="polite">
-      <p class="eyebrow">Solo para ti</p>
-
       <div class="screen screen-intro is-active" id="introScreen">
         <h1>Hay algo que llevo guardando con mucha ilusi&oacute;n.</h1>
         <p class="lead">
@@ -43,6 +41,9 @@
             <strong>Nos lleva al norte.</strong>
           </div>
         </div>
+        <button class="primary-button secondary-action" id="hintsButton" type="button">
+          Desvelar sorpresa
+        </button>
       </div>
 
       <div class="screen screen-countdown" id="countdownScreen">
@@ -53,7 +54,7 @@
 
       <div class="screen screen-reveal" id="revealScreen">
         <p class="soft-label">Sorpresa</p>
-        <h2>&iexcl;Nos vamos de viaje!</h2>
+        <h2>&iexcl;Nos vamos a Santander!</h2>
         <div class="destination-pill">
           <span>Nuestro destino</span>
           <strong id="destinationName">Santander</strong>
@@ -69,28 +70,17 @@
             <span>Boarding pass</span>
             <strong>Regalo sorpresa</strong>
           </div>
-          <div class="boarding-route">
-            <div>
-              <span>Salida</span>
-              <strong>Casa</strong>
-            </div>
-            <div class="route-line" aria-hidden="true"></div>
+          <div class="boarding-grid">
             <div>
               <span>Destino</span>
               <strong>Santander</strong>
             </div>
-          </div>
-          <div class="boarding-grid">
-            <div>
-              <span>Pasajeros</span>
-              <strong>T&uacute; y yo</strong>
-            </div>
-            <div>
-              <span>Equipaje</span>
-              <strong>Ganas de re&iacute;r</strong>
-            </div>
             <div>
               <span>Plan</span>
+              <strong>Escapada de fin de semana</strong>
+            </div>
+            <div>
+              <span>Promesa</span>
               <strong>Mirar el mar sin prisa</strong>
             </div>
             <div>
@@ -106,21 +96,29 @@
             <button class="date-option" type="button" data-date="12-14 de junio">
               <span>Opci&oacute;n 1</span>
               <strong>12-14 de junio</strong>
-              <small>Escapada de viernes a domingo</small>
+              <small>Escapada de fin de semana</small>
             </button>
             <button class="date-option" type="button" data-date="19-21 de junio">
               <span>Opci&oacute;n 2</span>
               <strong>19-21 de junio</strong>
-              <small>Escapada de viernes a domingo</small>
+              <small>Escapada de fin de semana</small>
             </button>
           </div>
-          <p class="selected-date" id="selectedDate" aria-live="polite"></p>
         </div>
+      </div>
 
-        <div class="final-note" id="finalNote" aria-live="polite">
-          <p>Tu &uacute;nica misi&oacute;n: preparar una mochila peque&ntilde;a y muchas ganas.</p>
-          <strong>Del resto me encargo yo.</strong>
+      <div class="screen screen-final" id="finalScreen">
+        <p class="soft-label">Ya est&aacute; decidido</p>
+        <div class="final-image-wrap">
+          <img src="assets/santander-final.png" alt="Atardecer junto al mar en Santander" class="final-image">
         </div>
+        <h2>Santander nos espera.</h2>
+        <p class="selected-date" id="selectedDate" aria-live="polite"></p>
+        <p class="romantic-message final-copy">
+          Tu &uacute;nica misi&oacute;n es preparar una mochila peque&ntilde;a y venir con ganas de
+          pasear, re&iacute;rnos y mirar el mar sin prisa. Del resto me encargo yo.
+        </p>
+        <p class="final-signature">Va a ser otro recuerdo precioso de los nuestros.</p>
       </div>
     </section>
 
