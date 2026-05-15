@@ -516,9 +516,9 @@ h2 {
 .final-image {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 72%;
 }
 
 .final-copy {
