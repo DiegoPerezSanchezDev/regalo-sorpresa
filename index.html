@@ -26,6 +26,25 @@
         </button>
       </div>
 
+      <div class="screen screen-hints" id="hintsScreen">
+        <p class="soft-label">Antes de abrirlo</p>
+        <h2>Tres pistas peque&ntilde;as.</h2>
+        <div class="hint-stack" aria-label="Pistas del regalo">
+          <div class="hint-card">
+            <span>01</span>
+            <strong>Tiene mar.</strong>
+          </div>
+          <div class="hint-card">
+            <span>02</span>
+            <strong>Huele a escapada.</strong>
+          </div>
+          <div class="hint-card">
+            <span>03</span>
+            <strong>Nos lleva al norte.</strong>
+          </div>
+        </div>
+      </div>
+
       <div class="screen screen-countdown" id="countdownScreen">
         <p class="soft-label">Respira hondo...</p>
         <div class="countdown-number" id="countdownNumber">3</div>
@@ -45,6 +64,42 @@
           guardadas para siempre.
         </p>
 
+        <div class="boarding-pass" aria-label="Billete del viaje">
+          <div class="boarding-top">
+            <span>Boarding pass</span>
+            <strong>Regalo sorpresa</strong>
+          </div>
+          <div class="boarding-route">
+            <div>
+              <span>Salida</span>
+              <strong>Casa</strong>
+            </div>
+            <div class="route-line" aria-hidden="true"></div>
+            <div>
+              <span>Destino</span>
+              <strong>Santander</strong>
+            </div>
+          </div>
+          <div class="boarding-grid">
+            <div>
+              <span>Pasajeros</span>
+              <strong>T&uacute; y yo</strong>
+            </div>
+            <div>
+              <span>Equipaje</span>
+              <strong>Ganas de re&iacute;r</strong>
+            </div>
+            <div>
+              <span>Plan</span>
+              <strong>Mirar el mar sin prisa</strong>
+            </div>
+            <div>
+              <span>Fechas</span>
+              <strong>T&uacute; eliges</strong>
+            </div>
+          </div>
+        </div>
+
         <div class="date-choice" aria-labelledby="dateChoiceTitle">
           <p class="date-choice-title" id="dateChoiceTitle">Ahora te toca elegir fecha</p>
           <div class="date-options" id="dateOptions">
@@ -60,6 +115,11 @@
             </button>
           </div>
           <p class="selected-date" id="selectedDate" aria-live="polite"></p>
+        </div>
+
+        <div class="final-note" id="finalNote" aria-live="polite">
+          <p>Tu &uacute;nica misi&oacute;n: preparar una mochila peque&ntilde;a y muchas ganas.</p>
+          <strong>Del resto me encargo yo.</strong>
         </div>
       </div>
     </section>

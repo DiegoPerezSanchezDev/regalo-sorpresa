@@ -2,11 +2,13 @@ const CONFIG = {
   destino: "Santander",
   mensajeFinal:
     "Porque no hay mejor regalo que seguir coleccionando momentos contigo. Prep\u00e1rate para mar, paseos bonitos, risas y una escapada de esas que se quedan guardadas para siempre.",
-  cuentaAtras: 3
+  cuentaAtras: 3,
+  duracionPistas: 3100
 };
 
 const revealButton = document.querySelector("#revealButton");
 const introScreen = document.querySelector("#introScreen");
+const hintsScreen = document.querySelector("#hintsScreen");
 const countdownScreen = document.querySelector("#countdownScreen");
 const revealScreen = document.querySelector("#revealScreen");
 const countdownNumber = document.querySelector("#countdownNumber");
@@ -14,6 +16,7 @@ const destinationName = document.querySelector("#destinationName");
 const romanticMessage = document.querySelector("#romanticMessage");
 const dateOptions = document.querySelectorAll(".date-option");
 const selectedDate = document.querySelector("#selectedDate");
+const finalNote = document.querySelector("#finalNote");
 const confettiCanvas = document.querySelector("#confettiCanvas");
 const ctx = confettiCanvas.getContext("2d");
 
@@ -24,7 +27,7 @@ destinationName.textContent = CONFIG.destino;
 romanticMessage.textContent = CONFIG.mensajeFinal;
 
 function showScreen(screen) {
-  [introScreen, countdownScreen, revealScreen].forEach((item) => {
+  [introScreen, hintsScreen, countdownScreen, revealScreen].forEach((item) => {
     item.classList.toggle("is-active", item === screen);
   });
 }
@@ -35,6 +38,9 @@ function wait(ms) {
 
 async function startExperience() {
   revealButton.disabled = true;
+  showScreen(hintsScreen);
+  await wait(CONFIG.duracionPistas);
+
   showScreen(countdownScreen);
 
   for (let value = CONFIG.cuentaAtras; value > 0; value -= 1) {
@@ -115,6 +121,7 @@ function selectDate(option) {
   });
 
   selectedDate.textContent = `Elegida: ${option.dataset.date}. Ya solo falta hacer la maleta.`;
+  finalNote.classList.add("is-visible");
   launchConfetti();
 }
 
