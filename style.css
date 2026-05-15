@@ -424,6 +424,12 @@ h2 {
   line-height: 1.25;
 }
 
+.boarding-grid .mystery-date {
+  color: var(--accent-dark);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
 .date-choice {
   width: 100%;
   max-width: 560px;

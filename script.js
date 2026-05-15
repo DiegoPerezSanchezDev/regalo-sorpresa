@@ -1,7 +1,7 @@
 const CONFIG = {
   destino: "Santander",
   mensajeFinal:
-    "Porque no hay mejor regalo que seguir coleccionando momentos contigo. Prep\u00e1rate para mar, paseos bonitos, risas y una escapada de esas que se quedan guardadas para siempre.",
+    "No hay mejor regalo que seguir coleccionando momentos contigo. Prep\u00e1rate para mar, paseos bonitos, risas y una escapada de esas que se quedan guardadas para siempre.",
   cuentaAtras: 3
 };
 
@@ -54,6 +54,7 @@ async function startCountdown() {
   }
 
   showScreen(revealScreen);
+  revealScreen.scrollTop = 0;
   launchConfetti();
 }
 
@@ -122,8 +123,9 @@ function selectDate(option) {
     item.classList.toggle("is-selected", item === option);
   });
 
-  selectedDate.textContent = `Elegida: ${option.dataset.date}. Ya solo falta hacer la maleta.`;
+  selectedDate.textContent = `${option.dataset.date}. Ya solo falta hacer la maleta.`;
   showScreen(finalScreen);
+  finalScreen.scrollTop = 0;
   launchConfetti();
 }
 
