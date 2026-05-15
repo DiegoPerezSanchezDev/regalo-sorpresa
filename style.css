@@ -69,7 +69,7 @@ button {
 .hero-card {
   position: relative;
   width: min(100%, 680px);
-  min-height: 560px;
+  min-height: 690px;
   padding: clamp(28px, 6vw, 56px);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -136,6 +136,21 @@ button {
   padding-top: 32px;
 }
 
+.screen-countdown {
+  align-items: center;
+  text-align: center;
+}
+
+.screen-reveal {
+  justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.screen-reveal::-webkit-scrollbar {
+  display: none;
+}
+
 h1,
 h2 {
   max-width: 11ch;
@@ -193,11 +208,6 @@ h2 {
   outline-offset: 4px;
 }
 
-.screen-countdown {
-  align-items: center;
-  text-align: center;
-}
-
 .countdown-number {
   display: grid;
   width: clamp(148px, 42vw, 230px);
@@ -250,6 +260,79 @@ h2 {
   line-height: 1.72;
 }
 
+.date-choice {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 28px;
+}
+
+.date-choice-title {
+  margin: 0 0 12px;
+  color: #232126;
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.date-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.date-option {
+  min-height: 132px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.66);
+  border-radius: 22px;
+  color: #211e24;
+  text-align: left;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 14px 34px rgba(50, 42, 58, 0.1);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.date-option:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 18px 42px rgba(50, 42, 58, 0.14);
+}
+
+.date-option:focus-visible {
+  outline: 3px solid rgba(216, 77, 106, 0.32);
+  outline-offset: 3px;
+}
+
+.date-option.is-selected {
+  border-color: rgba(216, 77, 106, 0.64);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 20px 46px rgba(159, 41, 68, 0.18);
+}
+
+.date-option span,
+.date-option small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.date-option strong {
+  display: block;
+  margin: 8px 0;
+  color: var(--accent-dark);
+  font-size: clamp(1.08rem, 3.2vw, 1.34rem);
+  line-height: 1.15;
+}
+
+.selected-date {
+  min-height: 26px;
+  margin: 14px 0 0;
+  color: var(--accent-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
 .footer-note {
   position: fixed;
   right: 22px;
@@ -282,7 +365,7 @@ h2 {
   }
 
   .hero-card {
-    min-height: calc(100vh - 72px);
+    min-height: calc(100vh - 44px);
     border-radius: 24px;
   }
 
@@ -308,6 +391,14 @@ h2 {
     flex-direction: column;
     gap: 4px;
     border-radius: 22px;
+  }
+
+  .date-options {
+    grid-template-columns: 1fr;
+  }
+
+  .date-option {
+    min-height: 118px;
   }
 
   .footer-note {

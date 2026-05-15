@@ -17,9 +17,9 @@
       <p class="eyebrow">Solo para ti</p>
 
       <div class="screen screen-intro is-active" id="introScreen">
-        <h1>Hay algo que llevo guardando con mucha ilusión.</h1>
+        <h1>Hay algo que llevo guardando con mucha ilusi&oacute;n.</h1>
         <p class="lead">
-          Si estás leyendo esto, significa que ha llegado el momento de descubrirlo.
+          Si est&aacute;s leyendo esto, significa que ha llegado el momento de descubrirlo.
         </p>
         <button class="primary-button" id="revealButton" type="button">
           Descubrir sorpresa
@@ -34,20 +34,37 @@
 
       <div class="screen screen-reveal" id="revealScreen">
         <p class="soft-label">Sorpresa</p>
-        <h2>¡Nos vamos de viaje!</h2>
+        <h2>&iexcl;Nos vamos de viaje!</h2>
         <div class="destination-pill">
           <span>Nuestro destino</span>
-          <strong id="destinationName">París</strong>
+          <strong id="destinationName">Santander</strong>
         </div>
         <p class="romantic-message" id="romanticMessage">
           Porque no hay mejor regalo que seguir coleccionando momentos contigo.
-          Prepárate para perdernos, reírnos y hacer de este viaje otro recuerdo
-          precioso de los nuestros.
+          Prep&aacute;rate para mar, paseos bonitos, risas y una escapada de esas que se quedan
+          guardadas para siempre.
         </p>
+
+        <div class="date-choice" aria-labelledby="dateChoiceTitle">
+          <p class="date-choice-title" id="dateChoiceTitle">Ahora te toca elegir fecha</p>
+          <div class="date-options" id="dateOptions">
+            <button class="date-option" type="button" data-date="12-14 de junio">
+              <span>Opci&oacute;n 1</span>
+              <strong>12-14 de junio</strong>
+              <small>Escapada de viernes a domingo</small>
+            </button>
+            <button class="date-option" type="button" data-date="19-21 de junio">
+              <span>Opci&oacute;n 2</span>
+              <strong>19-21 de junio</strong>
+              <small>Escapada de viernes a domingo</small>
+            </button>
+          </div>
+          <p class="selected-date" id="selectedDate" aria-live="polite"></p>
+        </div>
       </div>
     </section>
 
-    <p class="footer-note">Hecho con amor, nervios y muchísimas ganas.</p>
+    <p class="footer-note">Hecho con amor, nervios y much&iacute;simas ganas.</p>
   </main>
 
   <script src="script.js"></script>

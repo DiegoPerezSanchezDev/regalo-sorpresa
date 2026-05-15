@@ -1,7 +1,7 @@
 const CONFIG = {
-  destino: "París",
+  destino: "Santander",
   mensajeFinal:
-    "Porque no hay mejor regalo que seguir coleccionando momentos contigo. Prepárate para perdernos, reírnos y hacer de este viaje otro recuerdo precioso de los nuestros.",
+    "Porque no hay mejor regalo que seguir coleccionando momentos contigo. Prep\u00e1rate para mar, paseos bonitos, risas y una escapada de esas que se quedan guardadas para siempre.",
   cuentaAtras: 3
 };
 
@@ -12,6 +12,8 @@ const revealScreen = document.querySelector("#revealScreen");
 const countdownNumber = document.querySelector("#countdownNumber");
 const destinationName = document.querySelector("#destinationName");
 const romanticMessage = document.querySelector("#romanticMessage");
+const dateOptions = document.querySelectorAll(".date-option");
+const selectedDate = document.querySelector("#selectedDate");
 const confettiCanvas = document.querySelector("#confettiCanvas");
 const ctx = confettiCanvas.getContext("2d");
 
@@ -107,6 +109,18 @@ function launchConfetti() {
   drawConfetti();
 }
 
+function selectDate(option) {
+  dateOptions.forEach((item) => {
+    item.classList.toggle("is-selected", item === option);
+  });
+
+  selectedDate.textContent = `Elegida: ${option.dataset.date}. Ya solo falta hacer la maleta.`;
+  launchConfetti();
+}
+
 window.addEventListener("resize", resizeCanvas);
 revealButton.addEventListener("click", startExperience);
+dateOptions.forEach((option) => {
+  option.addEventListener("click", () => selectDate(option));
+});
 resizeCanvas();
